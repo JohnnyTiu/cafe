@@ -212,12 +212,12 @@
                         <span class="material-symbols-outlined text-4xl">schedule</span>
                     </div>
                     <div>
-                        <h3 class="font-headline-sm text-headline-sm text-primary">5:50 PM - 6:00 PM</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant">Recepción</p>
+                        <h3 class="font-headline-sm text-headline-sm text-primary">6:00 PM - 7:00 PM</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Sesión 1 (1 hora)</p>
                     </div>
                     <div>
-                        <h3 class="font-headline-sm text-headline-sm text-primary">1 hr</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant">Duración</p>
+                        <h3 class="font-headline-sm text-headline-sm text-primary">7:10 PM - 8:10 PM</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Sesión 2 (1 hora)</p>
                     </div>
                 </div>
                 <a href="https://maps.app.goo.gl/dH1CdTZiPL79h7H78" target="_blank" rel="noopener noreferrer"
@@ -399,6 +399,17 @@
                                     id="telefono" placeholder="+502 5802 2453" required="" type="tel" />
                             </div>
                         </div>
+                        <div class="space-y-2">
+                            <label class="font-label-md text-label-md text-secondary-fixed block"
+                                for="sesion">Sesión</label>
+                            <select
+                                class="w-full bg-transparent border-b-2 border-outline-variant/30 text-white pb-2 focus:outline-none focus:border-tertiary-container transition-colors focus-gold [&>option]:bg-primary [&>option]:text-white"
+                                id="sesion" required="">
+                                <option value="" disabled selected>Selecciona la sesión a la que deseas asistir</option>
+                                <option value="sesion1">Sesión 1 (6:00 PM)</option>
+                                <option value="sesion2">Sesión 2 (8:00 PM)</option>
+                            </select>
+                        </div>
                         <button
                             class="w-full mt-8 gold-shimmer text-on-tertiary-container font-headline-sm text-headline-sm py-4 rounded-full shadow-[0_10px_20px_rgba(132,89,43,0.2)] hover:shadow-[0_15px_25px_rgba(132,89,43,0.3)] transition-all duration-300"
                             type="submit">
@@ -418,13 +429,60 @@
                         </p>
                         <div class="flex items-center gap-2 text-secondary-fixed-dim mt-2">
                             <span class="material-symbols-outlined text-tertiary-fixed text-sm">calendar_today</span>
-                            <span class="font-label-md text-label-md">Jueves 21 de Agosto, 2026 · 5:50 PM</span>
+                            <span class="font-label-md text-label-md" id="success-time">Jueves 21 de Abril, 2026</span>
                         </div>
                     </div>
                 </div>
-                <script>
-                    document.getElementById('reservar-form').addEventListener('submit', function (e) {
+                <script type="module">
+                    import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+                    const SUPABASE_URL = 'https://yjfurafknxwoaqqrvhkf.supabase.co';
+                    const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_8AFJy2_o3iMBt6rjXeduGA_F9oGL3VB';
+                    const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
+                    const form = document.getElementById('reservar-form');
+                    const submitButton = form.querySelector('button[type="submit"]');
+
+                    form.addEventListener('submit', async function (e) {
                         e.preventDefault();
+
+                        if (SUPABASE_URL.includes('TU-PROYECTO') || SUPABASE_PUBLISHABLE_KEY.includes('TU_SUPABASE')) {
+                            alert('Configura la URL y la publishable key de Supabase antes de publicar.');
+                            return;
+                        }
+                        const selectedSession = document.getElementById('sesion');
+                        const sessionText = selectedSession.options[selectedSession.selectedIndex].text;
+
+                        submitButton.disabled = true;
+                        submitButton.textContent = 'Enviando...';
+
+                        const registro = {
+                            nombre: document.getElementById('nombre').value.trim(),
+                            universidad: document.getElementById('universidad').value.trim(),
+                            correo: document.getElementById('correo').value.trim(),
+                            telefono: document.getElementById('telefono').value.trim(),
+                            sesion: selectedSession.value
+                        };
+
+                        const { error } = await supabase
+                            .from('registros')
+                            .insert(registro);
+
+                        if (error) {
+                            console.error(error);
+
+                            if (error.code === '23505') {
+                                alert('Este correo ya fue registrado.');
+                            } else {
+                                alert('No se pudo enviar el registro. Intenta nuevamente.');
+                            }
+
+                            submitButton.disabled = false;
+                            submitButton.textContent = 'Quiero asistir';
+                            return;
+                        }
+                        document.getElementById('success-time').innerText = 'Jueves 21 de Abril, 2026 · ' + sessionText;
+
                         this.style.opacity = '0';
                         this.style.transition = 'opacity 0.3s ease';
                         setTimeout(() => {
