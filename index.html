@@ -38,39 +38,39 @@
 
         /* Glassmorphism */
         .glass-panel {
-            background: rgba(245, 245, 220, 0.7);
-            /* Secondary tint */
+            background: rgba(232, 209, 167, 0.7);
+            /* Golden Batter tint */
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(245, 245, 220, 0.4);
+            border: 1px solid rgba(232, 209, 167, 0.4);
         }
 
         .glass-card {
-            background: rgba(254, 252, 207, 0.8);
-            /* surface tint */
+            background: rgba(232, 209, 167, 0.55);
+            /* Golden Batter surface tint */
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(228, 228, 204, 0.5);
-            /* secondary-fixed */
-            box-shadow: 0 30px 50px -12px rgba(62, 39, 35, 0.05);
-            /* Soft primary shadow */
+            border: 1px solid rgba(157, 145, 103, 0.3);
+            /* Olive Harvest border */
+            box-shadow: 0 30px 50px -12px rgba(68, 45, 28, 0.08);
+            /* Cowhide Cocoa shadow */
         }
 
         /* Glows and Gradients */
         .gold-shimmer {
-            background: linear-gradient(135deg, #cba72f 0%, #ffe088 50%, #cba72f 100%);
+            background: linear-gradient(135deg, #84592B 0%, #E8D1A7 50%, #84592B 100%);
             background-size: 200% auto;
             transition: 0.5s;
         }
 
         .gold-shimmer:hover {
             background-position: right center;
-            box-shadow: 0 0 20px rgba(203, 167, 47, 0.4);
+            box-shadow: 0 0 20px rgba(132, 89, 43, 0.4);
         }
 
         .focus-gold:focus {
-            border-color: #cba72f;
-            box-shadow: 0 0 0 4px rgba(203, 167, 47, 0.1);
+            border-color: #84592B;
+            box-shadow: 0 0 0 4px rgba(132, 89, 43, 0.15);
         }
 
         /* Particle effects (simulated with CSS for hero) */
@@ -93,53 +93,53 @@
             theme: {
                 extend: {
                     "colors": {
-                        "tertiary-fixed": "#ffe088",
-                        "on-secondary-fixed": "#1b1d0e",
-                        "primary": "#271310",
-                        "primary-container": "#3e2723",
-                        "on-surface": "#1d1d03",
-                        "primary-fixed": "#ffdad4",
-                        "tertiary-container": "#cba72f",
-                        "surface-dim": "#dedcb1",
+                        "tertiary-fixed": "#E8D1A7",
+                        "on-secondary-fixed": "#442D1C",
+                        "primary": "#442D1C",
+                        "primary-container": "#5a3a24",
+                        "on-surface": "#442D1C",
+                        "primary-fixed": "#E8D1A7",
+                        "tertiary-container": "#84592B",
+                        "surface-dim": "#d4be94",
                         "error": "#ba1a1a",
-                        "surface-variant": "#e6e5b9",
-                        "surface-container-highest": "#e6e5b9",
-                        "tertiary-fixed-dim": "#e9c349",
-                        "on-secondary-fixed-variant": "#474836",
-                        "primary-fixed-dim": "#e3beb8",
+                        "surface-variant": "#E8D1A7",
+                        "surface-container-highest": "#d4be94",
+                        "tertiary-fixed-dim": "#9D9167",
+                        "on-secondary-fixed-variant": "#5a3a24",
+                        "primary-fixed-dim": "#d4be94",
                         "error-container": "#ffdad6",
-                        "tertiary": "#735c00",
-                        "on-primary-container": "#ae8d87",
-                        "surface-container-high": "#eceabe",
-                        "secondary-fixed-dim": "#c8c8b0",
+                        "tertiary": "#84592B",
+                        "on-primary-container": "#E8D1A7",
+                        "surface-container-high": "#dcc9a3",
+                        "secondary-fixed-dim": "#9D9167",
                         "on-primary": "#ffffff",
-                        "secondary": "#5e604d",
-                        "on-tertiary-fixed-variant": "#574500",
-                        "background": "#fefccf",
+                        "secondary": "#9D9167",
+                        "on-tertiary-fixed-variant": "#743014",
+                        "background": "#f5e6cc",
                         "on-secondary": "#ffffff",
                         "on-error": "#ffffff",
-                        "on-primary-fixed": "#2b1613",
-                        "on-tertiary-fixed": "#241a00",
-                        "outline-variant": "#d3c3c0",
-                        "on-primary-fixed-variant": "#5b403c",
-                        "surface-container": "#f2f0c4",
-                        "on-background": "#1d1d03",
-                        "surface-container-low": "#f8f6c9",
+                        "on-primary-fixed": "#442D1C",
+                        "on-tertiary-fixed": "#442D1C",
+                        "outline-variant": "#9D9167",
+                        "on-primary-fixed-variant": "#743014",
+                        "surface-container": "#eddcbe",
+                        "on-background": "#442D1C",
+                        "surface-container-low": "#f0e1c5",
                         "on-tertiary": "#ffffff",
-                        "surface-tint": "#745853",
-                        "on-tertiary-container": "#4e3d00",
+                        "surface-tint": "#84592B",
+                        "on-tertiary-container": "#ffffff",
                         "on-error-container": "#93000a",
-                        "surface": "#fefccf",
-                        "surface-bright": "#fefccf",
-                        "inverse-on-surface": "#f5f3c7",
-                        "outline": "#827472",
-                        "on-surface-variant": "#504442",
-                        "secondary-fixed": "#e4e4cc",
-                        "inverse-primary": "#e3beb8",
-                        "secondary-container": "#e1e1c9",
-                        "inverse-surface": "#323214",
-                        "surface-container-lowest": "#ffffff",
-                        "on-secondary-container": "#636451"
+                        "surface": "#f5e6cc",
+                        "surface-bright": "#f5e6cc",
+                        "inverse-on-surface": "#E8D1A7",
+                        "outline": "#9D9167",
+                        "on-surface-variant": "#6b5240",
+                        "secondary-fixed": "#E8D1A7",
+                        "inverse-primary": "#E8D1A7",
+                        "secondary-container": "#d4be94",
+                        "inverse-surface": "#442D1C",
+                        "surface-container-lowest": "#faf3e6",
+                        "on-secondary-container": "#5a3a24"
                     },
                     "borderRadius": {
                         "DEFAULT": "1rem",
@@ -288,8 +288,8 @@
                     </div>
                 </div>
                 <a href="https://maps.app.goo.gl/dH1CdTZiPL79h7H78" target="_blank" rel="noopener noreferrer"
-                    style="background: rgba(203, 167, 47, 0.1); border-color: rgba(203, 167, 47, 0.4);"
-                    class="glass-card rounded-xl p-8 flex flex-col items-center justify-center text-center gap-4 group hover:-translate-y-2 shadow-[0_10px_30px_-10px_rgba(203,167,47,0.3)] hover:shadow-[0_15px_30px_-5px_rgba(203,167,47,0.5)] transition-all duration-300 cursor-pointer relative overflow-hidden">
+                    style="background: rgba(132, 89, 43, 0.1); border-color: rgba(132, 89, 43, 0.4);"
+                    class="glass-card rounded-xl p-8 flex flex-col items-center justify-center text-center gap-4 group hover:-translate-y-2 shadow-[0_10px_30px_-10px_rgba(132,89,43,0.3)] hover:shadow-[0_15px_30px_-5px_rgba(132,89,43,0.5)] transition-all duration-300 cursor-pointer relative overflow-hidden">
                     <div
                         class="absolute top-4 right-4 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider flex items-center gap-1 shadow-md group-hover:scale-105 transition-transform">
                         <span class="material-symbols-outlined text-[14px]">map</span> Ver Mapa
@@ -408,7 +408,7 @@
         <!-- CTA & Form Section -->
         <section class="py-section-padding px-margin-mobile md:px-gutter mt-16" id="reservar">
             <div
-                class="max-w-container-max mx-auto bg-[#1A1A1A] rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row relative">
+                class="max-w-container-max mx-auto bg-[#442D1C] rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row relative">
                 <!-- Decorative background elements -->
                 <div class="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none">
                     <div class="absolute -top-20 -right-20 w-64 h-64 bg-tertiary-container/10 rounded-full blur-3xl">
@@ -466,7 +466,7 @@
                             </div>
                         </div>
                         <button
-                            class="w-full mt-8 gold-shimmer text-on-tertiary-container font-headline-sm text-headline-sm py-4 rounded-full shadow-[0_10px_20px_rgba(203,167,47,0.2)] hover:shadow-[0_15px_25px_rgba(203,167,47,0.3)] transition-all duration-300"
+                            class="w-full mt-8 gold-shimmer text-on-tertiary-container font-headline-sm text-headline-sm py-4 rounded-full shadow-[0_10px_20px_rgba(132,89,43,0.2)] hover:shadow-[0_15px_25px_rgba(132,89,43,0.3)] transition-all duration-300"
                             type="submit">
                             Quiero asistir
                         </button>
