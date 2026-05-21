@@ -216,10 +216,10 @@
                         <p class="font-body-md text-body-md text-on-surface-variant">Sesión 1 (1 hora)</p>
                         <span class="inline-block mt-1 text-[11px] font-bold uppercase tracking-wider text-white bg-red-600 px-2 py-0.5 rounded-full">Cupos llenos</span>
                     </div>
-                    <div>
-                        <h3 class="font-headline-sm text-headline-sm text-primary">7:00 PM - 8:00 PM</h3>
+                    <div class="opacity-50">
+                        <h3 class="font-headline-sm text-headline-sm text-primary line-through">7:00 PM - 8:00 PM</h3>
                         <p class="font-body-md text-body-md text-on-surface-variant">Sesión 2 (1 hora)</p>
-                        <span class="inline-block mt-1 text-[11px] font-bold uppercase tracking-wider text-white bg-green-700 px-2 py-0.5 rounded-full">Disponible</span>
+                        <span class="inline-block mt-1 text-[11px] font-bold uppercase tracking-wider text-white bg-red-600 px-2 py-0.5 rounded-full">Cupos llenos</span>
                     </div>
                 </div>
                 <a href="https://maps.app.goo.gl/dH1CdTZiPL79h7H78" target="_blank" rel="noopener noreferrer"
@@ -409,13 +409,13 @@
                                 id="sesion" required="">
                                 <option value="" disabled selected>Selecciona la sesión a la que deseas asistir</option>
                                 <option value="sesion1" disabled>Sesión 1 (6:00 PM - 7:00 PM) — Cupos llenos</option>
-                                <option value="sesion2">Sesión 2 (7:00 PM - 8:00 PM)</option>
+                                <option value="sesion2" disabled>Sesión 2 (7:00 PM - 8:00 PM) — Cupos llenos</option>
                             </select>
                         </div>
                         <button
-                            class="w-full mt-8 gold-shimmer text-on-tertiary-container font-headline-sm text-headline-sm py-4 rounded-full shadow-[0_10px_20px_rgba(132,89,43,0.2)] hover:shadow-[0_15px_25px_rgba(132,89,43,0.3)] transition-all duration-300"
-                            type="submit">
-                            Quiero asistir
+                            class="w-full mt-8 gold-shimmer text-on-tertiary-container font-headline-sm text-headline-sm py-4 rounded-full shadow-[0_10px_20px_rgba(132,89,43,0.2)] hover:shadow-[0_15px_25px_rgba(132,89,43,0.3)] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                            type="submit" disabled>
+                            Cupos llenos
                         </button>
                     </form>
                     <!-- Success Message (hidden by default) -->
@@ -444,6 +444,7 @@
 
                     const form = document.getElementById('reservar-form');
                     const submitButton = form.querySelector('button[type="submit"]');
+                    const closedSessions = new Set(['sesion1', 'sesion2']);
 
                     form.addEventListener('submit', async function (e) {
                         e.preventDefault();
@@ -453,6 +454,10 @@
                             return;
                         }
                         const selectedSession = document.getElementById('sesion');
+                        if (!selectedSession.value || closedSessions.has(selectedSession.value)) {
+                            alert('Los cupos para esta sesión ya están llenos.');
+                            return;
+                        }
                         const sessionText = selectedSession.options[selectedSession.selectedIndex].text;
 
                         submitButton.disabled = true;
