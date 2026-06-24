@@ -25,7 +25,7 @@ if (form) {
             universidad: document.getElementById('universidad').value.trim(),
             correo: document.getElementById('correo').value.trim(),
             telefono: document.getElementById('telefono').value.trim(),
-            sesion: document.getElementById('sesion')?.value || 'lista-espera'
+            sesion: document.getElementById('sesion')?.value || 'miercoles-1-julio-2026-17:00'
         };
 
         const { error } = await supabase
@@ -42,13 +42,13 @@ if (form) {
             }
 
             submitButton.disabled = false;
-            submitButton.textContent = 'Unirme a la lista';
+            submitButton.textContent = 'Reservar mi espacio';
             return;
         }
 
         const successTime = document.getElementById('success-time');
         if (successTime) {
-            successTime.innerText = 'Próxima edición por confirmar';
+            successTime.innerText = 'Miércoles 1 de julio de 2026 · 5:00 PM';
         }
 
         this.style.opacity = '0';
