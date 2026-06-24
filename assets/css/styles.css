@@ -17,39 +17,35 @@
 
 /* Glassmorphism */
 .glass-panel {
-    background: rgba(232, 209, 167, 0.7);
-    /* Golden Batter tint */
+    background: rgba(248, 247, 244, 0.82);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(232, 209, 167, 0.4);
+    border: 1px solid rgba(201, 196, 182, 0.55);
 }
 
 .glass-card {
-    background: rgba(232, 209, 167, 0.55);
-    /* Golden Batter surface tint */
+    background: rgba(255, 255, 255, 0.68);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(157, 145, 103, 0.3);
-    /* Olive Harvest border */
-    box-shadow: 0 30px 50px -12px rgba(68, 45, 28, 0.08);
-    /* Cowhide Cocoa shadow */
+    border: 1px solid rgba(201, 196, 182, 0.55);
+    box-shadow: 0 30px 50px -12px rgba(17, 17, 17, 0.10);
 }
 
 /* Glows and Gradients */
 .gold-shimmer {
-    background: linear-gradient(135deg, #84592B 0%, #E8D1A7 50%, #84592B 100%);
+    background: linear-gradient(135deg, #b89235 0%, #f0d98a 48%, #8d6e22 100%);
     background-size: 200% auto;
     transition: 0.5s;
 }
 
 .gold-shimmer:hover {
     background-position: right center;
-    box-shadow: 0 0 20px rgba(132, 89, 43, 0.4);
+    box-shadow: 0 0 20px rgba(217, 185, 95, 0.42);
 }
 
 .focus-gold:focus {
-    border-color: #84592B;
-    box-shadow: 0 0 0 4px rgba(132, 89, 43, 0.15);
+    border-color: #d9b95f;
+    box-shadow: 0 0 0 4px rgba(217, 185, 95, 0.18);
 }
 
 /* Particle effects (simulated with CSS for hero) */
