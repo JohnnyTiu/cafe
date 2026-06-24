@@ -8,7 +8,6 @@ const form = document.getElementById('reservar-form');
 
 if (form) {
     const submitButton = form.querySelector('button[type="submit"]');
-    const closedSessions = new Set(['sesion1', 'sesion2']);
 
     form.addEventListener('submit', async function (e) {
         e.preventDefault();
@@ -17,12 +16,6 @@ if (form) {
             alert('Configura la URL y la publishable key de Supabase antes de publicar.');
             return;
         }
-        const selectedSession = document.getElementById('sesion');
-        if (!selectedSession.value || closedSessions.has(selectedSession.value)) {
-            alert('Los cupos para esta sesión ya están llenos.');
-            return;
-        }
-        const sessionText = selectedSession.options[selectedSession.selectedIndex].text;
 
         submitButton.disabled = true;
         submitButton.textContent = 'Enviando...';
@@ -32,7 +25,7 @@ if (form) {
             universidad: document.getElementById('universidad').value.trim(),
             correo: document.getElementById('correo').value.trim(),
             telefono: document.getElementById('telefono').value.trim(),
-            sesion: selectedSession.value
+            sesion: document.getElementById('sesion')?.value || 'lista-espera'
         };
 
         const { error } = await supabase
@@ -49,13 +42,13 @@ if (form) {
             }
 
             submitButton.disabled = false;
-            submitButton.textContent = 'Quiero asistir';
+            submitButton.textContent = 'Unirme a la lista';
             return;
         }
 
         const successTime = document.getElementById('success-time');
         if (successTime) {
-            successTime.innerText = 'Jueves 21 de Abril, 2026 · ' + sessionText;
+            successTime.innerText = 'Próxima edición por confirmar';
         }
 
         this.style.opacity = '0';
