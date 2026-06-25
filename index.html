@@ -27,8 +27,7 @@
             <img alt="Logo Café Jurídico"
                 class="w-10 h-10 rounded-full object-cover border border-tertiary-container/30 shrink-0"
                 src="assets/images/logo-addveritas.jpg" />
-            <span
-                class="font-display-lg-mobile text-[24px] md:text-[40px] leading-none text-primary truncate">CAFÉ
+            <span class="font-display-lg-mobile text-[24px] md:text-[40px] leading-none text-primary truncate">CAFÉ
                 JURÍDICO</span>
         </a>
         <nav class="hidden lg:flex gap-8">
@@ -41,7 +40,7 @@
             <a class="text-on-secondary-fixed-variant font-label-md hover:text-tertiary transition-colors duration-300"
                 href="#ubicacion">Ubicación</a>
         </nav>
-        <a class="hidden md:inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md px-6 py-3 rounded-full hover:bg-primary transition-all duration-300 active:scale-95"
+        <a id="header-reserve-btn" class="hidden md:inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md px-6 py-3 rounded-full hover:bg-primary transition-all duration-300 active:scale-95"
             href="#reservar">
             Reservar
         </a>
@@ -73,12 +72,13 @@
                 <img alt="Fondo Café Jurídico" class="w-full h-full object-cover" src="assets/images/fondo2.png" />
             </div>
             <div class="particles-bg"></div>
-            <div class="relative z-20 w-full max-w-container-max mx-auto grid lg:grid-cols-[minmax(0,1fr)_380px] gap-10 items-end">
+            <div
+                class="relative z-20 w-full max-w-container-max mx-auto grid lg:grid-cols-[minmax(0,1fr)_380px] gap-10 items-end">
                 <div class="flex flex-col items-center text-center lg:items-start lg:text-left gap-7">
-                    <span
+                    <span id="hero-badge"
                         class="inline-flex items-center gap-2 rounded-full border border-gold-400/50 bg-ink-950/55 px-4 py-2 text-gold-300 font-label-md text-label-md backdrop-blur-md">
-                        <span class="material-symbols-outlined text-[18px]">stars</span>
-                        Cupo disponible · 1 de julio
+                        <span id="hero-badge-icon" class="material-symbols-outlined text-[18px]">stars</span>
+                        <span id="hero-badge-text">Cupo disponible · 1 de julio</span>
                     </span>
                     <div class="space-y-5">
                         <h1
@@ -91,7 +91,7 @@
                         </p>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-                        <a class="inline-flex items-center justify-center gold-shimmer text-on-tertiary-container font-label-md text-label-md px-8 py-4 rounded-full shadow-[0_15px_30px_-5px_rgba(217,185,95,0.35)] hover:scale-105 transition-transform duration-300"
+                        <a id="hero-reserve-btn" class="inline-flex items-center justify-center gold-shimmer text-on-tertiary-container font-label-md text-label-md px-8 py-4 rounded-full shadow-[0_15px_30px_-5px_rgba(217,185,95,0.35)] hover:scale-105 transition-transform duration-300"
                             href="#reservar">
                             Reservar mi espacio
                         </a>
@@ -103,7 +103,8 @@
                 </div>
 
                 <aside class="glass-panel rounded-xl p-6 md:p-7 text-left shadow-2xl">
-                    <p class="font-label-md text-label-md text-tertiary tracking-widest uppercase mb-5">Estado del evento
+                    <p class="font-label-md text-label-md text-tertiary tracking-widest uppercase mb-5">Estado del
+                        evento
                     </p>
                     <div class="space-y-5">
                         <div class="flex gap-4">
@@ -185,19 +186,19 @@
                 </div>
                 <div class="relative z-10 space-y-5">
                     <p class="font-label-md text-label-md text-tertiary tracking-widest uppercase">Tema central</p>
-                    <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary leading-tight">
-                        "Graduarse no es lo mismo que ejercer"
+                    <h2
+                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary leading-tight">
+                        "DE ESTUDIANTE A PROFESIONAL"
                     </h2>
                     <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
-                        La conversación parte de una idea simple: graduarse es el inicio, no la meta. Café Jurídico crea
-                        un espacio para hablar con honestidad sobre clientes, criterio profesional, primeras decisiones y
-                        la forma en que se construye reputación en el mundo legal.
+                        Decisiones que marcan una carrera jurídica
                     </p>
                 </div>
                 <div class="relative z-10 w-full max-w-[260px] mx-auto lg:mr-0">
-                    <div class="aspect-square rounded-xl overflow-hidden shadow-2xl bg-white flex items-center justify-center p-6">
-                        <img alt="Logo Instituto de Estudios Jurídicos Addveritas"
-                            class="w-full h-full object-contain" src="assets/images/logo-addveritas.jpg" />
+                    <div
+                        class="aspect-square rounded-xl overflow-hidden shadow-2xl bg-white flex items-center justify-center p-6">
+                        <img alt="Logo Instituto de Estudios Jurídicos Addveritas" class="w-full h-full object-contain"
+                            src="assets/images/logo-addveritas.jpg" />
                     </div>
                 </div>
             </div>
@@ -207,7 +208,8 @@
             <div class="grid lg:grid-cols-[360px_minmax(0,1fr)] gap-10 items-start">
                 <div class="space-y-4">
                     <p class="font-label-md text-label-md text-tertiary tracking-widest uppercase">Dinámica</p>
-                    <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary">
+                    <h2
+                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary">
                         Una hora bien aprovechada
                     </h2>
                     <p class="font-body-lg text-body-lg text-on-surface-variant">
@@ -236,7 +238,7 @@
                     </article>
                     <article class="glass-card rounded-xl p-7">
                         <span class="font-label-md text-label-md text-tertiary">04</span>
-                        <h3 class="font-headline-sm text-headline-sm text-primary mt-3 mb-2">Networking</h3>
+                        <h3 class="font-headline-sm text-headline-sm text-primary mt-3 mb-2">Red de Contactos</h3>
                         <p class="font-body-md text-body-md text-on-surface-variant">Cierre con café, conversación y
                             contactos profesionales.</p>
                     </article>
@@ -247,7 +249,8 @@
         <section class="py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto" id="experiencia">
             <div class="text-center mb-14 space-y-4">
                 <p class="font-label-md text-label-md text-tertiary tracking-widest uppercase">Experiencia</p>
-                <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary">
+                <h2
+                    class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary">
                     Lo que te llevas
                 </h2>
                 <div class="w-16 h-1 bg-tertiary-container mx-auto rounded-full"></div>
@@ -292,7 +295,8 @@
             <div class="grid lg:grid-cols-[minmax(0,1fr)_420px] gap-6 items-stretch">
                 <div class="glass-card rounded-xl p-8 md:p-12 flex flex-col justify-center">
                     <p class="font-label-md text-label-md text-tertiary tracking-widest uppercase mb-4">Ubicación</p>
-                    <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-5">
+                    <h2
+                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-5">
                         ADDLEGAL, Quetzaltenango
                     </h2>
                     <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8">
@@ -344,7 +348,8 @@
                         <span class="font-label-md text-label-md">Se requiere confirmación previa. Cupo limitado.</span>
                     </div>
                 </div>
-                <div class="bg-surface/5 backdrop-blur-md p-9 md:p-14 border-t lg:border-t-0 lg:border-l border-white/5 relative z-10">
+                <div
+                    class="bg-surface/5 backdrop-blur-md p-9 md:p-14 border-t lg:border-t-0 lg:border-l border-white/5 relative z-10">
                     <form id="reservar-form" class="space-y-6">
                         <input id="sesion" type="hidden" value="miercoles-1-julio-2026-17:00" />
                         <div class="space-y-2">
@@ -383,7 +388,8 @@
                             Reservar mi espacio
                         </button>
                     </form>
-                    <div id="success-message" class="hidden flex-col items-center justify-center text-center gap-6 py-10">
+                    <div id="success-message"
+                        class="hidden flex-col items-center justify-center text-center gap-6 py-10">
                         <div class="w-20 h-20 rounded-full bg-tertiary-container/20 flex items-center justify-center mx-auto"
                             style="animation: scaleIn 0.5s ease-out;">
                             <span class="material-symbols-outlined text-5xl text-tertiary-container">check_circle</span>
@@ -394,8 +400,20 @@
                         </p>
                         <div class="flex items-center gap-2 text-secondary-fixed-dim mt-2">
                             <span class="material-symbols-outlined text-tertiary-fixed text-sm">calendar_today</span>
-                            <span class="font-label-md text-label-md" id="success-time">Miércoles 1 de julio de 2026 · 5:00 PM</span>
+                            <span class="font-label-md text-label-md" id="success-time">Miércoles 1 de julio de 2026 ·
+                                5:00 PM</span>
                         </div>
+                    </div>
+                    <div id="full-message"
+                        class="hidden flex-col items-center justify-center text-center gap-6 py-10">
+                        <div class="w-20 h-20 rounded-full bg-red-500/10 flex items-center justify-center mx-auto"
+                            style="animation: scaleIn 0.5s ease-out;">
+                            <span class="material-symbols-outlined text-5xl text-red-500">block</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-tertiary-fixed">Cupos agotados</h3>
+                        <p class="font-body-lg text-body-lg text-secondary-fixed max-w-sm">
+                            Lo sentimos, los cupos para este encuentro se han completado. Síguenos en nuestras redes sociales para enterarte de futuras fechas.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -407,7 +425,8 @@
         <div class="flex items-center gap-3">
             <img alt="Logo Café Jurídico Footer" class="w-11 h-11 rounded-full border border-tertiary-fixed/30"
                 src="assets/images/logo-addveritas.jpg" />
-            <span class="font-display-lg text-[28px] md:text-[34px] leading-none text-tertiary-fixed">CAFÉ JURÍDICO</span>
+            <span class="font-display-lg text-[28px] md:text-[34px] leading-none text-tertiary-fixed">CAFÉ
+                JURÍDICO</span>
         </div>
         <nav class="flex flex-wrap justify-center gap-6">
             <a class="font-body-md text-body-md text-primary-fixed-dim hover:text-tertiary-fixed transition-all opacity-80 hover:opacity-100 flex items-center gap-2"
@@ -416,8 +435,8 @@
                 <span class="material-symbols-outlined text-sm">chat</span> Contacto +502 4202-6792
             </a>
             <a class="font-body-md text-body-md text-primary-fixed-dim hover:text-tertiary-fixed transition-all opacity-80 hover:opacity-100 flex items-center gap-2"
-                href="https://www.instagram.com/addveritas_?igsh=bWF0ZDd5dGozN2h2&amp;utm_source=qr"
-                target="_blank" rel="noopener noreferrer">
+                href="https://www.instagram.com/addveritas_?igsh=bWF0ZDd5dGozN2h2&amp;utm_source=qr" target="_blank"
+                rel="noopener noreferrer">
                 <svg class="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true">
                     <rect x="4" y="4" width="16" height="16" rx="5" stroke-width="2" />
@@ -427,7 +446,8 @@
                 Instagram
             </a>
             <a class="font-body-md text-body-md text-primary-fixed-dim hover:text-tertiary-fixed transition-all opacity-80 hover:opacity-100 flex items-center gap-2"
-                href="https://www.tiktok.com/@addveritas?_r=1&_t=ZS-97U0YPuIxFs" target="_blank" rel="noopener noreferrer">
+                href="https://www.tiktok.com/@addveritas?_r=1&_t=ZS-97U0YPuIxFs" target="_blank"
+                rel="noopener noreferrer">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.89-.74-3.94-1.78-.22-.22-.41-.47-.59-.73v7.02c0 3.7-2.63 7.13-6.43 7.46-4.51.39-8.48-2.92-8.47-7.44C5.02 10.1 9.07 6.13 13.6 7.2v4.02c-2.45-.63-5.06.85-5.5 3.32-.47 2.68 1.54 5.3 4.22 5.46 2.63.16 4.96-1.74 5.02-4.43.01-.22 0-.44 0-.66V.02z" />
