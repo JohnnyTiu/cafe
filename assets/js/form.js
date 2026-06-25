@@ -23,7 +23,7 @@ if (form) {
         const registro = {
             nombre: document.getElementById('nombre').value.trim(),
             universidad: document.getElementById('universidad').value.trim(),
-            correo: document.getElementById('correo').value.trim(),
+            correo: document.getElementById('correo').value.trim().toLowerCase(),
             telefono: document.getElementById('telefono').value.trim(),
         };
 
@@ -36,6 +36,8 @@ if (form) {
 
             if (error.code === '23505') {
                 alert('Este correo ya fue registrado.');
+            } else if (error.code === '42501') {
+                alert('El registro no esta habilitado en este momento. Por favor intenta mas tarde.');
             } else {
                 alert('No se pudo enviar el registro. Intenta nuevamente.');
             }
