@@ -90,6 +90,7 @@ if (form) {
         const registro = {
             nombre: document.getElementById('nombre').value.trim(),
             universidad: document.getElementById('universidad').value.trim(),
+            semestre: document.getElementById('semestre').value,
             correo: document.getElementById('correo').value.trim().toLowerCase(),
             telefono: document.getElementById('telefono').value.trim(),
         };

@@ -15,4 +15,6 @@ with check (
     and correo ~* '^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$'
     and telefono is not null
     and btrim(telefono) <> ''
+    and semestre is not null
+    and btrim(semestre) <> ''
 );
